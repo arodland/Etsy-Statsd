@@ -124,7 +124,7 @@ sub send {
 
 sub _send_to_sock( $$ ) {
   my ($sock,$msg) = @_;
-  CORE::send( $sock, $msg, 0 );
+  $sock->send($msg, 0);
 }
 
 =head1 SEE ALSO
